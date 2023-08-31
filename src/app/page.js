@@ -44,7 +44,7 @@ const schema = z
     }),
     hasCoupon: z.boolean(),
     coupon: z.string(),
-    password: z.string().min(6, {message: "Password must contain at least 6 characters"}).max(12, {message: "Password must no exceed 12 characters"}), //edit
+    password: z.string().min(6, {message: "Password must contain at least 6 characters"}).max(12, {message: "Password must not exceed 12 characters"}), //edit
     confirmPassword: z.string(),
   })
   .refine(
